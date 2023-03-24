@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components";
+import { Dashboard } from "./pages";
 import { GlobalStyle, theme } from "./styles";
 import { Layout } from "./template";
 
@@ -7,7 +8,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Layout>
-        <p>Place for news </p>
+        <Dashboard />
       </Layout>
     </ThemeProvider>
   );

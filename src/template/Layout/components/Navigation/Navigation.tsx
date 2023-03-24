@@ -1,3 +1,11 @@
+import { CountryLink } from "../../../../components";
+import { countries } from "../../../../config";
 import * as S from "./Navigation.styled";
 
-export const Navigation = () => <S.Wrapper>Navigation</S.Wrapper>;
+export const Navigation = () => (
+  <S.Wrapper>
+    {countries.map((country) => (
+      <CountryLink name={country.name} symbol={country.symbol} />
+    ))}
+  </S.Wrapper>
+);
