@@ -15,7 +15,7 @@ function App() {
           <Routes>
             <Route path={routes.dashboard} element={<Dashboard />} />
             <Route
-              path={`${routes.country}:countryName`}
+              path={`${routes.country}/:countryName`}
               element={<Dashboard />}
             />
           </Routes>

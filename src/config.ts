@@ -1,3 +1,8 @@
+export const config = {
+  API_BASE_URL: process.env.REACT_APP_API_URL,
+  API_KEY: process.env.REACT_APP_API_KEY,
+};
+
 export const countries = [
   {
     name: "Poland",
@@ -12,16 +17,16 @@ export const countries = [
     symbol: "DE",
   },
   {
-    name: "Denmark",
-    symbol: "DK",
-  },
-  {
     name: "Italy",
     symbol: "IT",
   },
   {
-    name: "Spain",
-    symbol: "ES",
+    name: "France",
+    symbol: "FR",
+  },
+  {
+    name: "Russia",
+    symbol: "RU",
   },
   {
     name: "United States",
@@ -32,16 +37,16 @@ export const countries = [
     symbol: "JP",
   },
   {
-    name: "Japan",
-    symbol: "JP",
+    name: "China",
+    symbol: "CN",
   },
   {
     name: "Brazil",
     symbol: "BR",
   },
   {
-    name: "Ghana",
-    symbol: "GN",
+    name: "South Africa	",
+    symbol: "ZA",
   },
   {
     name: "India",

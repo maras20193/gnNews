@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import * as S from "./CountryLink.styled";
 
 type CountryLinkProps = {
@@ -7,7 +7,7 @@ type CountryLinkProps = {
 };
 
 export const CountryLink = ({ name, symbol }: CountryLinkProps) => (
-  <Link to="/">
+  <NavLink to={`/country/${symbol.toLowerCase()}`}>
     <S.Wrapper>
       <img
         src={`https://flagsapi.com/${symbol}/shiny/32.png`}
@@ -15,5 +15,5 @@ export const CountryLink = ({ name, symbol }: CountryLinkProps) => (
       />
       <p>{name}</p>
     </S.Wrapper>
-  </Link>
+  </NavLink>
 );

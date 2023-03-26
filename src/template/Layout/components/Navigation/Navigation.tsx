@@ -5,7 +5,11 @@ import * as S from "./Navigation.styled";
 export const Navigation = () => (
   <S.Wrapper>
     {countries.map((country) => (
-      <CountryLink name={country.name} symbol={country.symbol} />
+      <CountryLink
+        key={country.name}
+        name={country.name}
+        symbol={country.symbol}
+      />
     ))}
   </S.Wrapper>
 );

@@ -1,4 +1,4 @@
 export const routes = {
   dashboard: "/",
-  country: "country",
+  country: "/country",
 };
