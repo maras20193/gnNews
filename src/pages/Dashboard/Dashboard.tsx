@@ -1,41 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getNews } from "../../api/news";
-import { selectDisplayStyle } from "../../store/features/viewSlice";
-import { useAppSelector } from "../../store/hooks";
-
-type News = {
-  source: {
-    id: string;
-    name: string;
-  };
-  author: string;
-  title: string;
-  description: string;
-  url: string;
-  urlToImage: string;
-};
+import { fetchNews } from "../../store/features/newsSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
 
 export const Dashboard = () => {
-  const [countries, setCountries] = useState<News[]>([]);
   const params = useParams();
 
-  const view = useAppSelector(selectDisplayStyle);
+  const view: string = useAppSelector((state) => state?.view?.displayStyle);
+  const articles: News[] = useAppSelector((state) => state?.news?.articles);
 
-  const fetchNews = async (country: string) => {
-    try {
-      const response = await getNews(country);
-      setCountries(response.data.articles);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (params.countryName) {
-      fetchNews(params.countryName);
+      dispatch(fetchNews(params.countryName));
     } else {
-      fetchNews("pl");
+      dispatch(fetchNews("pl"));
     }
   }, [params.countryName]);
 
@@ -43,8 +23,8 @@ export const Dashboard = () => {
     <div>
       <div>Mamy widok: {view}</div>
       <br />
-      {countries.map((country) => (
-        <p>{country.title}</p>
+      {articles.map((article) => (
+        <p>{article.title}</p>
       ))}
     </div>
   );
