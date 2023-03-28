@@ -4,16 +4,17 @@ import * as S from "./CountryLink.styled";
 type CountryLinkProps = {
   name: string;
   symbol: string;
+  isFullSize?: boolean;
 };
 
-export const CountryLink = ({ name, symbol }: CountryLinkProps) => (
-  <NavLink to={`/country/${symbol.toLowerCase()}`}>
-    <S.Wrapper>
+export const CountryLink = ({ name, symbol, isFullSize }: CountryLinkProps) => (
+  <S.Wrapper>
+    <NavLink to={`/country/${symbol.toLowerCase()}`}>
       <img
         src={`https://flagsapi.com/${symbol}/shiny/32.png`}
         alt={`${name} flag`}
       />
-      <p>{name}</p>
-    </S.Wrapper>
-  </NavLink>
+      {isFullSize && <p>{name}</p>}
+    </NavLink>
+  </S.Wrapper>
 );
