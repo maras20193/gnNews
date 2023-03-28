@@ -36,22 +36,31 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const IconWrapper = styled.div`
+export const IconsWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 16px;
 `;
 
-export const Icon = styled.div`
+export const IconButton = styled.button`
   display: flex;
   flex-direction: row;
-  width: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 
   @media ${device.tablet} {
     width: 24px;
   }
 
-  img {
-    width: 100%;
+  span {
+    font-size: 24px;
+    color: ${({ theme }) => theme.colors.primary};
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
   }
 `;
