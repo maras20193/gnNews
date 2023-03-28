@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { getNews } from "../../api/news";
 
 type initialStateType = {
-  articles: News[];
+  articles: Article[];
   loading: boolean;
   error: boolean;
 };

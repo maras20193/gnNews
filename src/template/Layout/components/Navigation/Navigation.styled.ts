@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import { device } from "../../../../styles";
 
-export const Wrapper = styled.nav<{ isOpen: boolean }>`
-  min-width: ${({ isOpen }) => (isOpen ? "250px" : "80px")};
+export const Wrapper = styled.nav`
+  max-width: 80px;
   background-color: ${({ theme }) => theme.colors.background.primary};
-  border-top: 4px solid ${({ theme }) => theme.colors.primary};
-  border-bottom: 4px solid ${({ theme }) => theme.colors.primary};
+
+  @media ${device.tablet} {
+    min-width: 250px;
+  }
 `;
 
 export const Nav = styled.ul`

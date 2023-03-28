@@ -1,4 +1,4 @@
-declare type News = {
+declare type Article = {
   source: {
     id: string;
     name: string;
@@ -8,4 +8,6 @@ declare type News = {
   description: string;
   url: string;
   urlToImage: string;
+  publishedAt: string;
+  content: string;
 };

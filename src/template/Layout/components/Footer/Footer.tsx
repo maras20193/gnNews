@@ -3,7 +3,7 @@ import { useAppSelector } from "../../../../store/hooks";
 import * as S from "./Footer.styled";
 
 export const Footer = () => {
-  const articles: News[] = useAppSelector((state) => state?.news?.articles);
+  const articles: Article[] = useAppSelector((state) => state?.news?.articles);
 
   return (
     <S.Wrapper>

@@ -8,6 +8,7 @@ export const Wrapper = styled.header`
   justify-content: space-between;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background.primary};
+  border-bottom: 3px solid ${({ theme }) => theme.colors.primary};
 
   margin: 0 auto;
   height: 70px;
