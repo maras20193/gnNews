@@ -1,1 +1,1 @@
-export { ListView } from "./ListView/ListView";
+export { MainContent } from "./MainContent/MainContent";
