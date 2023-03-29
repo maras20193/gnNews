@@ -61,5 +61,23 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Verdana";
+    overflow: hidden;
+
+    /* ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.colors.background.primary};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-radius: 10px;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.colors.primaryHover};
+    }
+  } */
   }
 `;

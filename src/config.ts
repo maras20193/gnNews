@@ -60,4 +60,24 @@ export const countries = [
     name: "Portugal",
     symbol: "PT",
   },
+  {
+    name: "China",
+    symbol: "CN",
+  },
+  {
+    name: "Brazil",
+    symbol: "BR",
+  },
+  {
+    name: "South Africa	",
+    symbol: "ZA",
+  },
+  {
+    name: "India",
+    symbol: "IN",
+  },
+  {
+    name: "Portugal",
+    symbol: "PT",
+  },
 ];

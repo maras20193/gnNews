@@ -12,4 +12,7 @@ export const Wrapper = styled.footer`
   color: ${({ theme }) => theme.colors.text.primary};
   border-top: 3px solid ${({ theme }) => theme.colors.primary};
   padding: 0 24px;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
 `;

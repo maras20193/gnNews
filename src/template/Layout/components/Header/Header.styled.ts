@@ -9,6 +9,8 @@ export const Wrapper = styled.header`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.background.primary};
   border-bottom: 3px solid ${({ theme }) => theme.colors.primary};
+  position: fixed;
+  z-index: 10;
 
   margin: 0 auto;
   height: 70px;

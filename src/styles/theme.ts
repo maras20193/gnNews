@@ -11,5 +11,6 @@ export const theme = {
       secondary: "#000000",
     },
     primary: "#D5EB04",
+    primaryHover: "#a8b903",
   },
 };
