@@ -16,7 +16,7 @@ export const Dashboard = () => {
     if (params.countryName) {
       dispatch(fetchNews(params.countryName));
     } else {
-      dispatch(fetchNews("pl"));
+      dispatch(fetchNews("us"));
     }
   }, [params.countryName]);
 

@@ -6,7 +6,7 @@ type initialStateType = {
 };
 
 const initialState: initialStateType = {
-  displayStyle: config.VIEW_VARIANTS.LINES,
+  displayStyle: config.VIEW_VARIANTS.TILES,
 };
 
 export const viewSlice = createSlice({

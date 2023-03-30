@@ -15,6 +15,10 @@ export const ImageWrapper = styled.div`
   }
 `;
 
+export const Author = styled.p`
+  align-self: flex-end;
+`;
+
 export const ArticleLink = styled.a`
   color: ${({ theme }) => theme.colors.primary};
   margin-top: 6px;

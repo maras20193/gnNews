@@ -1,11 +1,11 @@
 import { CountryLink } from "../../../../components";
-import { countries } from "../../../../config";
+import { countryData } from "../../../../data/countryData";
 import * as S from "./Navigation.styled";
 
 export const Navigation = () => (
   <S.Wrapper>
     <S.Nav>
-      {countries.map((country) => (
+      {countryData.map((country) => (
         <CountryLink
           key={country.name}
           name={country.name}
