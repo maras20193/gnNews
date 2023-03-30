@@ -62,22 +62,28 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Verdana";
     overflow: hidden;
-
-    /* ::-webkit-scrollbar {
-    width: 6px;
   }
 
-  ::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.colors.background.primary};
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.primary};
-    border-radius: 10px;
-
-    &:hover {
-      background-color: ${({ theme }) => theme.colors.primaryHover};
+  .modal {
+    .ant-modal-content {
+      background-color: ${({ theme }) => theme.colors.background.primary}
     }
-  } */
+    .ant-modal-header {
+      background-color: ${({ theme }) => theme.colors.background.primary};
+      color: ${({ theme }) => theme.colors.text.primary};
+    }
+    .ant-modal-footer {
+      display: none;
+    }
+    .ant-modal-title {
+      color: ${({ theme }) => theme.colors.primary};
+      margin-right: 14px;
+    }
+    .ant-modal-body {
+      color: ${({ theme }) => theme.colors.text.primary};
+    }
+    .ant-modal-close-x {
+      color: ${({ theme }) => theme.colors.text.primary};
+    }
   }
 `;
