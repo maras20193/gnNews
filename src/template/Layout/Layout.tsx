@@ -6,7 +6,11 @@ type LayoutProps = {
 };
 
 export const Layout = ({ children }: LayoutProps) => (
-  <S.Wrapper>
+  <S.Wrapper
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}
+  >
     <Header />
     <S.MainWrapper>
       <Navigation />

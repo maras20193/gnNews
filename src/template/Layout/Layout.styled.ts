@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { device } from "../../styles";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -10,7 +10,11 @@ type MainContentProps = {
 export const MainContent = ({ data }: MainContentProps) => {
   const view: string = useAppSelector((state) => state?.view?.displayStyle);
   return (
-    <div>
+    <S.MainWrapper
+      initial={{ opacity: 0, y: 60 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {view === config.VIEW_VARIANTS.LINES ? (
         <S.LinesWrapper>
           {data.map((article) => (
@@ -24,6 +28,6 @@ export const MainContent = ({ data }: MainContentProps) => {
           ))}
         </S.TilesWrapper>
       )}
-    </div>
+    </S.MainWrapper>
   );
 };

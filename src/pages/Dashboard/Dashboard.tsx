@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Loader } from "../../components";
 import { fetchNews } from "../../store/features/newsSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { MainContent } from "./components";
@@ -8,7 +9,7 @@ import * as S from "./Dashboard.styled";
 export const Dashboard = () => {
   const params = useParams();
 
-  const articles: Article[] = useAppSelector((state) => state?.news?.articles);
+  const { articles, loading } = useAppSelector((state) => state?.news);
 
   const dispatch = useAppDispatch();
 
@@ -22,7 +23,7 @@ export const Dashboard = () => {
 
   return (
     <S.Wrapper>
-      <MainContent data={articles} />
+      {loading ? <Loader /> : <MainContent data={articles} />}
     </S.Wrapper>
   );
 };
