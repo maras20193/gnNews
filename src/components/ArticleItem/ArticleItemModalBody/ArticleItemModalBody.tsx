@@ -7,7 +7,7 @@ type ArticleItemModalBodyProps = {
 };
 
 export const ArticleItemModalBody = ({ data }: ArticleItemModalBodyProps) => (
-  <S.Wrapper>
+  <S.Wrapper data-testid="articleItemModalBody">
     <S.ImageWrapper>
       <img src={data.urlToImage ? data.urlToImage : noNews} alt={data.title} />
     </S.ImageWrapper>

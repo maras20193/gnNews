@@ -19,7 +19,11 @@ export const ArticleItem = ({ data, advanced }: ArticleItemProps) => {
 
   return (
     <>
-      <S.Wrapper advanced={advanced} onClick={handleOpen}>
+      <S.Wrapper
+        advanced={advanced}
+        onClick={handleOpen}
+        data-testid="articleItem"
+      >
         {advanced ? (
           <div>
             <S.ImageWrapper>
@@ -29,9 +33,7 @@ export const ArticleItem = ({ data, advanced }: ArticleItemProps) => {
               />
             </S.ImageWrapper>
             <S.Title>{data.title}</S.Title>
-            <S.Content>
-              {data.content && truncateText(data.content, 80)}
-            </S.Content>
+            <S.Content>{data.description}</S.Content>
           </div>
         ) : (
           <S.Title>{data.title}</S.Title>

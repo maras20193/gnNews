@@ -13,5 +13,5 @@ export const TimeCounter = () => {
 
     return () => clearInterval(intervalId);
   }, []);
-  return <p>{timeDisplay}</p>;
+  return <p data-testid="counter">{timeDisplay}</p>;
 };

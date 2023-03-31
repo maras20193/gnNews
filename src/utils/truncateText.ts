@@ -1,2 +1,2 @@
-export const truncateText = (text: string, maxChar: number) =>
-  `${text.slice(0, maxChar)}...`;
+export const truncateText = (text: string, charsNumber = 10) =>
+  `${text.slice(0, charsNumber)}...`;
