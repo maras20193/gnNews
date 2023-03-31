@@ -13,6 +13,8 @@ export const Wrapper = styled.nav`
     height: calc(100vh - 84px - 60px - 20px);
   }
 
+  scrollbar-width: none;
+
   ::-webkit-scrollbar {
     width: 6px;
   }
