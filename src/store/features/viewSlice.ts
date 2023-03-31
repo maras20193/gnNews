@@ -3,10 +3,12 @@ import { config } from "../../config";
 
 type initialStateType = {
   displayStyle: string;
+  language: string;
 };
 
 const initialState: initialStateType = {
   displayStyle: config.VIEW_VARIANTS.TILES,
+  language: config.LANGUAGE.ENGLISH,
 };
 
 export const viewSlice = createSlice({
@@ -16,10 +18,13 @@ export const viewSlice = createSlice({
     changeView: (state, action: PayloadAction<string>) => {
       state.displayStyle = action.payload;
     },
+    changeLanguage: (state, action: PayloadAction<string>) => {
+      state.language = action.payload;
+    },
   },
 });
 
-export const { changeView } = viewSlice.actions;
+export const { changeView, changeLanguage } = viewSlice.actions;
 
 export const selectDisplayStyle = (state: RootState) => state.view.displayStyle;
 

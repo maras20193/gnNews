@@ -5,4 +5,9 @@ export const config = {
     LINES: "lines",
     TILES: "tiles",
   },
+  LANGUAGE: {
+    ENGLISH: "en-us",
+    GERMAN: "de-de",
+    FRENCH: "fr-ca",
+  },
 };
