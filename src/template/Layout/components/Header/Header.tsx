@@ -12,6 +12,7 @@ import { useAppDispatch, useAppSelector } from "../../../../store/hooks";
 import { routes } from "../../../../utils/routes";
 import * as S from "./Header.styled";
 import { useModal } from "../../../../hooks";
+import { ThoughtsModalBody } from "./ThoughtsModalBody/ThoughtsModalBody";
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -46,12 +47,12 @@ export const Header = () => {
         </S.IconButton>
       </S.IconsWrapper>
       <Modal
-        title="My thoughts"
+        title="THE COOLEST AND HARDEST THING"
         open={isModalOpen}
         onCancel={closeModal}
         className="modal"
       >
-        dobrze i zle
+        <ThoughtsModalBody />
       </Modal>
     </S.Wrapper>
   );
