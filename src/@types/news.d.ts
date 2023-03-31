@@ -11,3 +11,9 @@ declare type Article = {
   publishedAt: string;
   content: string;
 };
+
+declare type ArticlesResponse = {
+  articles: Article[];
+  status: string;
+  totalResults: number;
+};
