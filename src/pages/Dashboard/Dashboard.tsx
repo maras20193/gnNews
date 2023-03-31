@@ -1,8 +1,6 @@
 import { useEffect } from "react";
-import { FormattedMessage } from "react-intl";
 import { useParams } from "react-router-dom";
 import { Loader } from "../../components";
-import { messages } from "../../i18n/messages";
 import { fetchNews } from "../../store/features/newsSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { MainContent } from "./components";
@@ -25,7 +23,6 @@ export const Dashboard = () => {
 
   return (
     <S.Wrapper>
-      <FormattedMessage id="hello" />
       {loading ? <Loader /> : <MainContent data={articles} />}
     </S.Wrapper>
   );

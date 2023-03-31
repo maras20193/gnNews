@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import { TimeCounter } from "../../../../components";
 import { useAppSelector } from "../../../../store/hooks";
 import * as S from "./Footer.styled";
@@ -7,7 +8,11 @@ export const Footer = () => {
 
   return (
     <S.Wrapper>
-      <p>{`(${articles.length} articles)`}</p>
+      <p>
+        {`( ${articles.length} `}
+        <FormattedMessage id="article" />
+        {` )`}
+      </p>
       <TimeCounter />
     </S.Wrapper>
   );
