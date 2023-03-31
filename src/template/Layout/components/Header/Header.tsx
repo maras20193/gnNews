@@ -7,20 +7,18 @@ import { Link } from "react-router-dom";
 import { Modal } from "antd";
 import { logo } from "../../../../assets";
 import { config } from "../../../../config";
-import {
-  changeLanguage,
-  changeView,
-} from "../../../../store/features/viewSlice";
+import { changeView } from "../../../../store/features/viewSlice";
 import { useAppDispatch, useAppSelector } from "../../../../store/hooks";
 import { routes } from "../../../../utils/routes";
 import * as S from "./Header.styled";
 import { useModal } from "../../../../hooks";
-import { ThoughtsModalBody } from "./ThoughtsModalBody/ThoughtsModalBody";
+import { ThoughtsModalBody } from "./components/ThoughtsModalBody/ThoughtsModalBody";
+import { DropdownI18n } from "./components/DropdownI18n/DropdownI18n";
 
 export const Header = () => {
   const dispatch = useAppDispatch();
 
-  const { displayStyle, language } = useAppSelector((state) => state?.view);
+  const view = useAppSelector((state) => state?.view?.displayStyle);
 
   const { isModalOpen, openModal, closeModal } = useModal();
 
@@ -32,7 +30,8 @@ export const Header = () => {
         </S.LogoWrapper>
       </Link>
       <S.IconsWrapper>
-        {displayStyle === config.VIEW_VARIANTS.LINES ? (
+        <DropdownI18n />
+        {view === config.VIEW_VARIANTS.LINES ? (
           <S.IconButton
             onClick={() => dispatch(changeView(config.VIEW_VARIANTS.TILES))}
           >
@@ -49,24 +48,6 @@ export const Header = () => {
           <RobotFilled />
         </S.IconButton>
       </S.IconsWrapper>
-      <button
-        type="button"
-        onClick={() => dispatch(changeLanguage(config.LANGUAGE.ENGLISH))}
-      >
-        ENGLISH
-      </button>
-      <button
-        type="button"
-        onClick={() => dispatch(changeLanguage(config.LANGUAGE.GERMAN))}
-      >
-        GERMAN
-      </button>
-      <button
-        type="button"
-        onClick={() => dispatch(changeLanguage(config.LANGUAGE.FRENCH))}
-      >
-        FRENCH
-      </button>
       <Modal
         title="THE COOLEST AND HARDEST THING"
         open={isModalOpen}

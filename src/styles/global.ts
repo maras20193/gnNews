@@ -86,4 +86,13 @@ export const GlobalStyle = createGlobalStyle`
       color: ${({ theme }) => theme.colors.text.primary};
     }
   }
+
+  .myDropdown {
+    .ant-dropdown-menu {
+      background-color: ${({ theme }) => theme.colors.background.primary};
+      border: 2px solid ${({ theme }) => theme.colors.primary};
+      cursor: none;
+      z-index: 100;
+    }
+  }
 `;
